@@ -1,2 +1,2 @@
 # PHP-POO
-Playground project startup
+Playground project
