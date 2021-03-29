@@ -3,6 +3,7 @@
 class Character {
 
     private $PV = 80;
+    const PV_MAX = 100;
     private $force = 20;
     private $name;
     private $isDead = false;
@@ -17,14 +18,14 @@ class Character {
             $this->force = $force;
         }
 
-        if ($PV != null && $PV > 0 && $PV < 101){
+        if ($PV != null && $PV > 0 && $PV < self::PV_MAX){
             $this->PV = $PV;
         }
         else if($PV <= 0){
-            echo('Not able to set your character as a Zombie')
+            echo('Not able to set your character as a Zombie');
         }
-        else if ($PV > 100){
-            echo("Your character can't be super character, it's too easy :p")
+        else if ($PV > self::PV_MAX){
+            echo("Your character can't be super character, it's too easy :p");
         }
     }
 
@@ -33,15 +34,15 @@ class Character {
     }
 
     public function selfHealing($healPoints = null){
-        if ($this->PV < 100 && $healPoints != null){
+        if ($this->PV < self::PV_MAX && $healPoints != null){
 
             $this->PV += $healPoints;
         }
 
-        if ($this->PV > 100 || $healPoints === null){
-            $this->PV = 100;
+        if ($this->PV > self::PV_MAX || $healPoints === null){
+            $this->PV = self::PV_MAX;
         }
-        $this->PV = 100;
+        $this->PV = self::PV_MAX;
     }
 
     public function attack($target){
