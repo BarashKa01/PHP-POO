@@ -4,7 +4,7 @@ require 'form.php';
 require 'text.php';
 
 $form = new Form($_POST);
-Text::publicWithZero()
+Text::publicWithZero(9);
 ?>
 
 <form action="#" method="post">

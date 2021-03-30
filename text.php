@@ -9,11 +9,11 @@ class Text{
         if ($number < 10) {
             return '0'. $number.self::$suffix;
          } else{
-          return $number.$suffix;      
+          return $number. self::$suffix;      
         }
     }
 
     public static function publicWithZero($number) {
-        return self::withZero($number)
+        return self::withZero($number);
     }
 }

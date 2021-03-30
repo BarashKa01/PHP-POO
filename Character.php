@@ -2,11 +2,11 @@
 
 class Character {
 
-    private $PV = 80;
+    protected $PV = 80;
     const PV_MAX = 100;
-    private $force = 20;
-    private $name;
-    private $isDead = false;
+    protected $force = 20;
+    protected $name;
+    protected $isDead = false;
 
     public function __construct($name, $force = null, $PV = null)
     {
@@ -21,11 +21,14 @@ class Character {
         if ($PV != null && $PV > 0 && $PV < self::PV_MAX){
             $this->PV = $PV;
         }
-        else if($PV <= 0){
+        else if($PV < 0){
             echo('Not able to set your character as a Zombie');
         }
         else if ($PV > self::PV_MAX){
             echo("Your character can't be super character, it's too easy :p");
+        }
+        else if ($PV = null){
+            $this->PV = self::PV_MAX;
         }
     }
 
@@ -53,7 +56,7 @@ class Character {
         $this->isDead();
     }
 
-    public function isDead()
+    protected function isDead()
     {
         if ($this->PV < 1) {
             $this->isDead = true;
