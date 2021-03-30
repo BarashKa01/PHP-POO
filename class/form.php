@@ -29,7 +29,7 @@ class Form{
      * @param $content HTML element injected to be surrounded
      * @return string
      */
-    private function surround($content){
+    protected function surround($content){
         return "<{$this->surround}>$content</$this->surround>";
     }
 
@@ -37,7 +37,7 @@ class Form{
      * @param $index string stored from user submit ($_POST)
      * @return string
      */
-    private function getValue($index){ 
+    protected function getValue($index){ 
         return isset($this->data[$index]) ? $this->data[$index] : null;
     }
 
