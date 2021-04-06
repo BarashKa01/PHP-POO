@@ -1,5 +1,7 @@
 <?php
 
+namespace Barashka\Characters;
+
 class Character {
 
     protected $PV = 80;

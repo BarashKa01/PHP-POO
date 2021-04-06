@@ -1,4 +1,5 @@
 <?php
+namespace Barashka\Characters;
 
 class Archer extends Character {
     public $PV = 90;

@@ -1,3 +1,8 @@
+<?php
+use \Barashka\Autoloader;
+use \Barashka\HTML\BootstrapForm;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,5 +1,9 @@
 <?php
 
+namespace Barashka\HTML;
+
+use DateTime;
+
 /**
  * Class form
  * Generate quickly a regular form

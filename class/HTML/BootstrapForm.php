@@ -1,5 +1,5 @@
 <?php
-
+namespace Barashka\HTML;
 class BootstrapForm extends Form{
     
     

@@ -1,7 +1,14 @@
 <?php
 
-require 'Character.php';
-require 'Archer.php';
+namespace Barashka;
+
+use \Barashka\Characters\Character;
+use \Barashka\Characters\Archer;
+use \Barashka\Autoloader;
+
+
+require 'class\Autoloader.php';
+Autoloader::register();
 
 $merlin = new Character('Merlin');
 $harry = new Character('Harry');
